@@ -31,12 +31,14 @@ jobs:
           set -euo pipefail
           test -s README.md
           test -s LICENSE
+          test -s PORTFOLIO_GUIDE_KO.md
 
           required_sections=(
             "## 30초 요약"
             "## 대표 프로젝트"
             "## 안전한 상태 변경 자동화"
             "## 검증 결과를 읽는 방법"
+            "## 무선 네트워크 진단과 정책 분석"
           )
           for section in "${required_sections[@]}"; do
             grep -Fq "$section" README.md
@@ -51,12 +53,16 @@ jobs:
             "samsung-ies-switch-watch"
             "aruba-mm-session-cleanup"
             "aruba-wireless-policy-mapper"
+            "aruba-session-tracker-1"
+            "wlan-live-path-tester-ko"
+            "wlan-troubleshooter-ko"
           )
           for repository in "${required_repositories[@]}"; do
             grep -Fq "https://github.com/sebia1993/$repository" README.md
+            grep -Fq "https://github.com/sebia1993/$repository" PORTFOLIO_GUIDE_KO.md
           done
 
-          if grep -Eiq 'mailto:|[[:alnum:]._%+-]+@[[:alnum:].-]+\.[[:alpha:]]{2,}' README.md; then
+          if grep -Eiq 'mailto:|[[:alnum:]._%+-]+@[[:alnum:].-]+\.[[:alpha:]]{2,}' README.md PORTFOLIO_GUIDE_KO.md; then
             echo "README에는 공개 이메일 대신 GitHub 프로필 연락 경로만 사용해야 합니다." >&2
             exit 1
           fi

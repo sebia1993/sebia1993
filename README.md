@@ -4,6 +4,8 @@
 
 Python과 C#으로 Windows 운영 도구를 만들며, 장비 접속부터 입력 검증, 실패 격리, 결과 무결성, 패키징, CI/CD까지 한 흐름으로 설계합니다. 연락은 공개 이메일 대신 [GitHub 프로필](https://github.com/sebia1993)을 이용해 주세요.
 
+**처음 방문하셨다면:** 아래 대표 프로젝트에서 관심 있는 운영 문제를 선택한 뒤, [기술 검토 가이드](PORTFOLIO_GUIDE_KO.md)에서 설계·코드·검증 근거를 확인할 수 있습니다. 공개 프로젝트 11개를 다루며, 실제 장비 검증 여부는 프로젝트별로 구분합니다.
+
 ## 30초 요약
 
 | 관점 | 제가 보여드리는 것 |
@@ -11,7 +13,7 @@ Python과 C#으로 Windows 운영 도구를 만들며, 장비 접속부터 입�
 | 업무 문제 | 반복 접속, 수작업 비교, 장애 오인, 불완전한 기록을 자동화로 줄임 |
 | 안전 설계 | 잘못된 장비·바뀐 SSH 지문·위험한 명령·불완전한 출력에서는 멈추는 fail-closed 원칙 |
 | 사용자 경험 | 네트워크 CLI를 몰라도 상태, 위험도, 성공·실패 이유를 이해할 수 있는 Windows UI와 보고서 |
-| 품질 증거 | 단위·통합·합성 부하 테스트, Windows CI, 배포 ZIP, SHA-256, SBOM |
+| 품질 증거 | 프로젝트별 단위·통합·합성 부하 테스트와 Windows CI; 배포물별 ZIP·SHA-256·SBOM 제공 여부 확인 |
 | 증거 원칙 | 실제 현장 검증과 자동 테스트를 구분하며, 공개할 수 없는 업무 성과 수치는 만들지 않음 |
 
 ## 대표 프로젝트
@@ -30,11 +32,19 @@ Python과 C#으로 Windows 운영 도구를 만들며, 장비 접속부터 입�
 읽기 전용 수집과 실제 상태 변경은 같은 방식으로 다루지 않습니다.
 
 - [Aruba MM Session Cleanup](https://github.com/sebia1993/aruba-mm-session-cleanup): 삭제 대상을 최초 조회로 고정하고 승인·재시도·사후 검증을 통제합니다.
-- [Aruba Wireless Policy Mapper](https://github.com/sebia1993/aruba-wireless-policy-mapper): Alias·Role·ACL 관계와 변경 영향을 설명하며 SSH와 Telnet의 보안 경계를 명시합니다.
+
+## 무선 네트워크 진단과 정책 분석
+
+| 프로젝트 | 확인하려는 운영 문제 | 기술 검토 포인트 |
+|---|---|---|
+| [Aruba Wireless Policy Mapper](https://github.com/sebia1993/aruba-wireless-policy-mapper) | 무선 정책에서 Alias·Role·ACL 관계와 참조 누락 파악 | 읽기 전용 수집, 정책 파싱, SSH·Telnet 보안 경계 |
+| [Aruba Session Tracker](https://github.com/sebia1993/aruba-session-tracker-1) | 활성 MD에서 IP·포트·Flags 조건에 맞는 datapath 세션 추적 | 장비 탐색, 세션 필터, 이력 저장과 보고서 |
+| [WLAN Live Path Tester KO](https://github.com/sebia1993/wlan-live-path-tester-ko) | Windows 무선 연결에서 DNS·TCP·HTTP 및 프록시 경로 관측 | 측정 경계, 취소·종료 처리, 무선 상태와 경로 결과 연결; 사전 공개 단계 |
+| [WLAN Troubleshooter KO](https://github.com/sebia1993/wlan-troubleshooter-ko) | 외부 통신 없이 PCAP/PCAPNG의 장애 근거 정리 | 결정적 규칙, 수집 범위에 따른 판단 제한; 프로토콜 상관분석 정확도 추가 검증 필요 |
 
 ## 검증 결과를 읽는 방법
 
-각 저장소는 README 첫 화면에서 다음을 분리해 설명합니다.
+각 저장소의 README와 연결된 검증 문서에서 다음을 확인할 수 있습니다.
 
 1. 해결하려 한 운영 문제와 설계 판단
 2. 자동 테스트·가짜 장비·합성 부하 시험으로 확인한 범위
@@ -42,3 +52,5 @@ Python과 C#으로 Windows 운영 도구를 만들며, 장비 접속부터 입�
 4. Windows 배포물의 해시와 SBOM, 서명되지 않은 실행 파일의 한계
 
 이 구분은 테스트 통과를 현장 적용 성과로 과장하지 않기 위한 포트폴리오 원칙입니다.
+
+`main`의 코드, PR에서 검증한 코드, 내려받는 릴리스는 서로 다른 버전일 수 있습니다. Actions의 커밋 SHA와 릴리스 태그를 함께 확인하고, 시험용 데이터로 재현한 결과를 실제 장애 해결 실적으로 표현하지 않습니다.
