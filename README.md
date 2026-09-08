@@ -16,6 +16,33 @@ Python과 C#으로 Windows 운영 도구를 만들며, 장비 접속부터 입�
 | 품질 증거 | 프로젝트별 단위·통합·합성 부하 테스트와 Windows CI; 배포물별 ZIP·SHA-256·SBOM 제공 여부 확인 |
 | 증거 원칙 | 실제 현장 검증과 자동 테스트를 구분하며, 공개할 수 없는 업무 성과 수치는 만들지 않음 |
 
+## 실제 화면과 사용 흐름
+
+**2026-09-08 확인한 현재 앱 화면**입니다. 측정 전 상태 또는 문서용 합성 데이터를 실제 앱에서 렌더했으며, 회사 네트워크 관측값이나 현장 성과를 뜻하지 않습니다. 이미지를 누르면 단계별 행동·읽을 값·다음 점검으로 이어집니다.
+
+| WLAN 진단 | 세션 조사 | 다중 Ping 관측 |
+|---|---|---|
+| [<img src="https://raw.githubusercontent.com/sebia1993/wlan-live-path-tester-ko/2e51d811f7b8731e4238e5bd19658c34598eaf58/docs/images/usage/01-guided-step.png" width="300" alt="WLAN 진단: 측정 전 실제 WPF 화면">](https://github.com/sebia1993/wlan-live-path-tester-ko/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | [<img src="https://raw.githubusercontent.com/sebia1993/aruba-session-tracker-1/5742383e9e1600eb7ab15c03f75946cd35bcef4a/docs/images/session-query.png" width="300" alt="세션 조사: 합성 4행과 실제 Qt 상세 화면">](https://github.com/sebia1993/aruba-session-tracker-1/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | [<img src="https://raw.githubusercontent.com/sebia1993/multi-target-ping-monitor/740943504b460210d175769c8a7a360867320e27/docs/images/multiping-main.png" width="300" alt="다중 Ping: 합성 지연과 손실을 표시한 실제 Qt 그래프">](https://github.com/sebia1993/multi-target-ping-monitor/blob/main/docs/USAGE_SCREENSHOTS_KO.md) |
+| 미실행을 구분하는 WPF 시작 화면 | 합성 결과와 선택 행의 NOC 상세 | 합성 지연·손실의 대상별 비교 |
+
+11개 앱의 화면 안내에는 캡처 출처·버전·합성 여부·재현 방법과 검증 한계를 함께 기록합니다. 대표 이미지는 확인한 커밋의 원본 PNG에 고정했으며, 아래 링크는 각 저장소의 최신 사용 안내로 연결됩니다.
+
+| 앱 | 화면으로 확인할 흐름 |
+|---|---|
+| [WLAN Live Path Tester KO](https://github.com/sebia1993/wlan-live-path-tester-ko/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 무선 연결 → IP·경로 → 프록시 → 성능 → 결과·보고서 |
+| [WLAN Troubleshooter KO](https://github.com/sebia1993/wlan-troubleshooter-ko/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 캡처 선택 → 관측 가능 범위 → 분석 근거·판단 한계 |
+| [Aruba Session Tracker](https://github.com/sebia1993/aruba-session-tracker-1/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 장비 범위 → 세션 결과·상세 → 기록 → HTML 조사 보고서 |
+| [Aruba Cluster Health Dashboard](https://github.com/sebia1993/aruba-cluster-health-dashboard/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 등록 범위 → 상태 개요 → 복수 이상 → 장애 필터 |
+| [Multi-target Ping Monitor](https://github.com/sebia1993/multi-target-ping-monitor/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 대상 입력 → 지연·손실 비교 → 저장·내보내기 경계 |
+| [HPE Comware Change Validator](https://github.com/sebia1993/hpe-comware-change-validator/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 기준 수집 → 비교 조건 → 선택한 변경 근거 → 작업 기록 |
+| [Aruba 2930F Config Backup](https://github.com/sebia1993/aruba-2930f-config-backup/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 백업 범위 → SSH 지문 확인 → 완료·재시도 → 혼합 결과 |
+| [Samsung IES Switch Watch](https://github.com/sebia1993/samsung-ies-switch-watch/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | Agent 설정 → Viewer 페어링 → 상태 → 명령 근거 |
+| [Aruba Wireless Policy Mapper](https://github.com/sebia1993/aruba-wireless-policy-mapper/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 분석 설정 → 수집 단계 → 완전성 확인 → 산출물 |
+| [Aruba MM Session Cleanup](https://github.com/sebia1993/aruba-mm-session-cleanup/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 정리 범위 → 조회 snapshot → 최종 승인 → 사후 검증 |
+| [Internal Network Transfer Diagnostics](https://github.com/sebia1993/internal-network-transfer-diagnostics/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 전송 설정 → 파일 선택 → 측정 → 저장 결과 |
+
+화면에 표시된 `정상`, `완료`, `현재 관측됨`은 프로젝트마다 뜻이 다릅니다. 수집 상태·세션 관측·통신 성공을 구분하고, 그래프의 합성 예시를 실제 장애 해결 수치로 인용하지 않습니다.
+
 ## 대표 프로젝트
 
 | 프로젝트 | 한 문장 설명 | 핵심 역량 |
