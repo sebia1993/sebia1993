@@ -33,7 +33,7 @@ Python과 C#으로 Windows 운영 도구를 만들며, 장비 접속부터 입�
 | [WLAN Troubleshooter KO](https://github.com/sebia1993/wlan-troubleshooter-ko/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 캡처 선택 → 관측 가능 범위 → 분석 근거·판단 한계 |
 | [Aruba Session Tracker](https://github.com/sebia1993/aruba-session-tracker-1/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 장비 범위 → 세션 결과·상세 → 기록 → HTML 조사 보고서 |
 | [Aruba Cluster Health Dashboard](https://github.com/sebia1993/aruba-cluster-health-dashboard/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 등록 범위 → 상태 개요 → 복수 이상 → 장애 필터 |
-| [Multi-target Ping Monitor](https://github.com/sebia1993/multi-target-ping-monitor/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 대상 입력 → 지연·손실 비교 → 저장·내보내기 경계 |
+| [Multi-target Ping Monitor](https://github.com/sebia1993/multi-target-ping-monitor/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 대상 입력 → 지연·손실 비교; 저장·내보내기는 개발 검증 부록 |
 | [HPE Comware Change Validator](https://github.com/sebia1993/hpe-comware-change-validator/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 기준 수집 → 비교 조건 → 선택한 변경 근거 → 작업 기록 |
 | [Aruba 2930F Config Backup](https://github.com/sebia1993/aruba-2930f-config-backup/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | 백업 범위 → SSH 지문 확인 → 완료·재시도 → 혼합 결과 |
 | [Samsung IES Switch Watch](https://github.com/sebia1993/samsung-ies-switch-watch/blob/main/docs/USAGE_SCREENSHOTS_KO.md) | Agent 설정 → Viewer 페어링 → 상태 → 명령 근거 |
@@ -47,7 +47,7 @@ Python과 C#으로 Windows 운영 도구를 만들며, 장비 접속부터 입�
 
 | 프로젝트 | 한 문장 설명 | 핵심 역량 |
 |---|---|---|
-| [Multi-target Ping Monitor](https://github.com/sebia1993/multi-target-ping-monitor) | 최대 50개 대상의 지연·손실을 실시간 관측하고 장시간 세션을 복구·분석 | 실시간 관측, 장시간 안정성, Windows GUI |
+| [Multi-target Ping Monitor](https://github.com/sebia1993/multi-target-ping-monitor) | 최대 50개 대상의 지연·손실을 실시간 관측하고 관측 결과를 CSV로 기록 | 실시간 관측, 장시간 안정성, Windows GUI |
 | [Aruba Cluster Health Dashboard](https://github.com/sebia1993/aruba-cluster-health-dashboard) | 여러 무선 장비 관측값을 연결해 장애와 수집 실패를 구분 | 상관분석, 상태 모델, 오탐 억제 |
 | [Internal Network Transfer Diagnostics](https://github.com/sebia1993/internal-network-transfer-diagnostics) | 폐쇄망 파일 전달과 HTTP/TCP 처리량 측정을 하나의 도구로 통합 | 네트워크 진단, 저장 무결성, 장애 복구 |
 | [HPE Comware Change Validator](https://github.com/sebia1993/hpe-comware-change-validator) | 작업 전·후 장비 상태를 비교해 링크·라우팅·이중화 위험을 분류 | 변경 검증, 읽기 전용 수집, 위험도 설명 |
