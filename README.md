@@ -7,7 +7,7 @@
 - Aruba WLAN · ClearPass · Campus Network · Troubleshooting
 - 반복 CLI 조회·상태 비교·보고를 Network Automation으로 개선
 
-[🌐 웹 이력서](https://sebia1993.github.io) · [🛠 프로젝트 상세](https://sebia1993.github.io/projects.html) · [🔍 장애분석 방식](https://sebia1993.github.io/troubleshooting.html)
+[🌐 웹 이력서](https://sebia1993.github.io) · [🛠 프로젝트 상세](https://sebia1993.github.io/projects.html) · [🔍 장애분석 방식](https://sebia1993.github.io/troubleshooting.html) · [📚 학습 로드맵](https://sebia1993.github.io/roadmap.html)
 
 ---
 
