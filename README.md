@@ -1,10 +1,23 @@
-# sebia1993 | 네트워크 자동화 포트폴리오
+# 현상일 | Wireless Network Operations Engineer
+
+대규모 Enterprise WLAN/NAC를 직접 운영하고, 장애를 1차 판단·복구·검증하며 반복 운영을 자동화로 개선합니다.
+
+- 3개 사업장 WLAN/NAC 직접 운영
+- 최대 2.5K+ AP / 250+ Access Switch 규모의 Enterprise Campus 경험
+- Aruba WLAN · ClearPass · Campus Network · Troubleshooting
+- 반복 CLI 조회·상태 비교·보고를 Network Automation으로 개선
+
+[🌐 웹 이력서](https://sebia1993.github.io) · [🛠 프로젝트 상세](https://sebia1993.github.io/projects.html) · [🔍 장애분석 방식](https://sebia1993.github.io/troubleshooting.html) · [✉️ 이메일](mailto:sebia1993@gmail.com)
+
+---
+
+## 네트워크 자동화 포트폴리오
 
 반복적인 네트워크 운영 업무를 **안전하게 자동화하고, 결과를 비전공자도 이해할 수 있는 화면과 근거로 바꾸는 엔지니어**입니다.
 
-Python과 C#으로 Windows 운영 도구를 만들며, 장비 접속부터 입력 검증, 실패 격리, 결과 무결성, 패키징, CI/CD까지 한 흐름으로 설계합니다. 연락은 공개 이메일 대신 [GitHub 프로필](https://github.com/sebia1993)을 이용해 주세요.
+Python과 C#으로 Windows 운영 도구를 만들며, 장비 접속부터 입력 검증, 실패 격리, 결과 무결성, 패키징, CI/CD까지 한 흐름으로 설계합니다.
 
-**처음 방문하셨다면:** 아래 대표 프로젝트에서 관심 있는 운영 문제를 선택한 뒤, [기술 검토 가이드](PORTFOLIO_GUIDE_KO.md)에서 설계·코드·검증 근거를 확인할 수 있습니다. 공개 프로젝트 11개를 다루며, 실제 장비 검증 여부는 프로젝트별로 구분합니다.
+**처음 방문하셨다면:** 위의 [웹 이력서](https://sebia1993.github.io)에서 경력과 운영 범위를 먼저 확인한 뒤, 아래 대표 프로젝트와 [기술 검토 가이드](PORTFOLIO_GUIDE_KO.md)에서 설계·코드·검증 근거를 확인할 수 있습니다.
 
 ## 30초 요약
 
